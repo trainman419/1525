@@ -1,0 +1,87 @@
+package(default_visibility = ['//visibility:public'])
+
+filegroup(
+    name = 'gcc',
+    srcs = [
+        'usr/bin/gcc',
+    ],
+)
+
+filegroup(
+    name = 'gcov',
+    srcs = [
+        'usr/bin/gcov',
+    ],
+)
+
+filegroup(
+    name = 'ar',
+    srcs = [
+        'usr/bin/ar',
+    ],
+)
+
+filegroup(
+    name = 'ld',
+    srcs = [
+        'usr/bin/ld',
+    ],
+)
+
+filegroup(
+    name = 'nm',
+    srcs = [
+        'usr/bin/nm',
+    ],
+)
+
+filegroup(
+    name = 'objcopy',
+    srcs = [
+        'usr/bin/objcopy',
+    ],
+)
+
+filegroup(
+    name = 'objdump',
+    srcs = [
+        'usr/bin/objdump',
+    ],
+)
+
+filegroup(
+    name = 'strip',
+    srcs = [
+        'usr/bin/strip',
+    ],
+)
+
+filegroup(
+    name = 'as',
+    srcs = [
+        'usr/bin/as',
+    ],
+)
+
+filegroup(
+    name = 'compiler_pieces',
+    srcs = glob([
+        # This is a very aggressive glob but we really do want to include the
+        # entire contents of the package and make it available to the compiler.
+        '**',
+    ]),
+)
+
+filegroup(
+    name = 'compiler_components',
+    srcs = [
+        ':gcc',
+        ':ar',
+        ':ld',
+        ':nm',
+        ':objcopy',
+        ':objdump',
+        ':strip',
+        ':as',
+    ],
+)

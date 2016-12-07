@@ -1,0 +1,3 @@
+#!/bin/bash --norc
+
+exec external/gcc_4_8/usr/bin/objdump "$@"
