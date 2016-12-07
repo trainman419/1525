@@ -12,6 +12,6 @@ cc_library(
       ".",
     ],
     defines = [
-      "QUUX=1337",
+      "QUUX=7135",
     ],
 )
