@@ -1,3 +1,4 @@
+workspace( name = "repro_1525" )
 
 bind(
     name = "a_lib",
