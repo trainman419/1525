@@ -10,7 +10,7 @@ bazel clean
 bazel shutdown
 
 # check out the initial state
-git checkout start
+git checkout start_2
 
 echo "start"
 ls -l build/BUILD.ab
@@ -23,7 +23,7 @@ bazel build //repro:repro_1525
 bazel run //repro:repro_1525
 
 # check out the new state; try to repro
-git checkout master
+git checkout master_2
 echo "master"
 ls -l build/BUILD.ab
 touch -m -d "$now" build/BUILD.ab
