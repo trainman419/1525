@@ -3,12 +3,12 @@ package(default_visibility = ['//visibility:public'])
 cc_library(
     name = "a_lib",
     srcs = [
-      "ext/a.c",
+      "a.c",
     ],
     hdrs = [
-      "ext/a.h",
+      "a.h",
     ],
     includes = [
-      "ext",
+      ".",
     ],
 )
